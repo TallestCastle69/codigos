@@ -1,0 +1,343 @@
+@font-face {
+    font-family: Leander;
+    src: url(Fonte/Leander.ttf);
+}
+
+:root{
+    --back-opacity: rgba(240, 248, 255, 0.28);
+    --back-white: rgba(240,248,255);
+    --back-black: black;
+}
+
+body{
+    margin: 0;
+    background-image: url(PeakyBlinders1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}   
+
+header{
+
+    background:  rgba(240, 248, 255, 0.28);
+
+}
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0;
+   
+}
+
+.logo{
+    font-family: 'Leander';
+    font-size: 40px;
+    width: 50%;
+    padding: 0;
+
+}
+
+.imgLogo{
+    width: 3rem;
+    display: none;
+}
+
+.logoLink{
+
+
+}
+
+#navbar{
+   
+}
+
+a{
+    color: black;
+}
+
+.menuItem{
+    list-style: none;
+    margin: 20px ;
+}
+
+.nav{
+    font-size: 25px;
+    font-family: 'Leander';
+}
+
+.title{
+    font-size: 4rem;
+    width: 20%;
+    margin-left: 11%;
+
+    margin-bottom: 0;
+}
+
+.title1{
+
+    font-size: 4rem;
+    width: 20%;
+    margin-left: 15%;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.txt{
+    margin-left: 11%;
+    font-size: 30px;
+
+}
+
+#txtTitle{
+    font-family: 'Leander';
+
+    position: relative;
+    height: 600px;
+}   
+
+.video{
+    position: absolute;
+
+    left: 50%;
+    top: 40px;
+}
+
+
+
+/*header{
+    height: 600px;
+}
+
+.Alink, .linkPersona{
+    color: var(--back-black);
+    text-decoration: none;
+}
+
+
+.logo{
+    position: absolute;
+    font-size: 48px;
+    font-family: 'Leander';
+    left: 80px;
+    top: 20px;
+}
+
+#menu{
+    position: absolute;
+    left: 700px;
+    top: 20px;
+    width: 470px;
+}
+
+
+
+.menuItem{
+    list-style: none;
+    display: inline;
+    font-size: 24px;
+    margin-left: 30px;
+    font-family: 'Leander';
+}
+
+.Alink:hover, .liPersona:hover, .liTemporadas:hover, .linkPersona:hover  {
+    background:  var(--back-black);
+    color: var(--back-white);
+}
+
+
+.containerHeader{
+    background-color: var(--back-opacity);
+    position: relative;
+    width: 100%;
+    height: 108px;
+    z-index: 2;
+}
+
+.title{
+    position: absolute;
+    left: 11%;
+    top: 120px;
+    font-size: 72px;
+    font-family: 'Leander';
+}
+
+.title1{
+    position: absolute;
+    left: 15%;
+    top: 214px;
+    font-size: 72px;
+    font-family: 'Leander';
+}
+
+.txt{
+    position: absolute;
+    left: 11%;
+    top: 370px;
+    font-size: 24px;
+    font-family: 'Leander';
+}
+
+.video{
+    position: absolute;
+    left: 600px;
+    top: 150px;
+}*/
+
+/*Fim Header*/
+
+#Sobre{
+    
+    border: 1px solid red;
+    background: var(--back-opacity);
+    border-radius: 30px;
+}
+
+.txtLi{
+    display: flex;
+    flex-direction: row;
+}
+
+.txtSobre{
+    margin: 20px 10%;
+    background: var(--back-white);
+    font-family: 'Leander';
+    width: 30%;
+}
+
+#imgSobre{
+    width: 30%;
+    margin-left: 10%;
+}
+
+
+#Personagens, #Temporadas{
+    border: 1px solid red;
+    margin-top: 50px;
+    background-color: var(--back-opacity);
+    border-radius: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.titlePersona{
+    font-family: 'Leander';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#listaPersonagens, #listaTemporadas{
+   margin-bottom: 50px;
+   
+}
+
+.liPersona{
+    list-style: none;
+    display: inline;
+    font-family: 'Leander';
+    margin-left: 5%;
+    font-size: 24px;
+}
+
+.liTemporadas{
+    list-style: none;
+    display: inline;
+    font-family: 'Leander';
+    margin-left: 3%;
+    font-size: 24px;
+}
+
+#Tommy, #Arthur, #John, #Polly{
+  margin-top: 30px;
+}
+
+.InfoPersonagen{
+    display: flex;
+    flex-direction: row;
+}
+
+.txtPersonagen{
+    width: 30%;
+    background: var(--back-white);
+    margin: 20px 10%;
+}
+
+.imgPersonagen{
+    width: 20%;
+    border-radius: 50px;
+    margin-left: 10%;
+}
+
+.TXTtemp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.txtTemp{
+    width: 70%;
+    background: var(--back-white);
+    margin: 20px 10%;
+    padding: 3%;
+}
+
+
+
+@media (max-width:853px){
+    #menu{
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .imgPersonagen{
+        display: none;
+    }
+
+    .txtPersonagen{
+        width: 80%;
+    }
+}
+
+@media (max-width:480px){
+    .media{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #containerHeader{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imgLogo{
+        display: inline;
+    }
+
+    .video{
+        left: 0px;
+        top: 260px;
+        width: 100%;
+        
+    }
+
+    #txtTitle{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .txtLi{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .txtSobre{
+        width: 80%;
+    }
+
+   
+
+    
+}

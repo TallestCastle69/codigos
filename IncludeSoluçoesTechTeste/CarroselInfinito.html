@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel Infinito</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.carousel-item {
+    min-width: 150px;
+    margin: 0 10px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    position: relative;
+    animation: moveItem 10s linear infinite;
+}
+
+@keyframes moveItem {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-item">Item 1</div>
+        <div class="carousel-item">Item 2</div>
+        <div class="carousel-item">Item 3</div>
+        <div class="carousel-item">Item 4</div>
+        <div class="carousel-item">Item 5</div>
+    </div>
+
+    <script>
+        const carousel = document.querySelector('.carousel');
+const items = Array.from(document.querySelectorAll('.carousel-item'));
+
+function cloneItems() {
+    items.forEach(item => {
+        const clone = item.cloneNode(true);
+        carousel.appendChild(clone);
+    });
+}
+
+cloneItems();
+
+    </script>
+</body>
+</html>
+

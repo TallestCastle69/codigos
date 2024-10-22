@@ -1,0 +1,171 @@
+div{
+    
+}
+
+
+body{
+    margin: 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: #11111f;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .full-height-container {
+    position: relative;
+    height: 100%;
+   
+  }
+
+  .container-fluid {
+
+   
+  }
+
+/*Logo*/
+.Logo h1{
+    float: left;
+    
+}
+
+.Logo{
+    width: 30%;
+    height: 285px;
+    text-indent: -9999px; /*Escondendo o texto "caso o css nao rode o texto do lado entrara no lugar da logo"*/
+    display: block;
+    background: url(SiteMath/logo3.png) no-repeat;
+   
+}
+/*Fim Logo*/
+
+/*Inicio da barra de menu*/
+header{
+    position: relative;
+    width: 400px;
+    padding: 15px 0;
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+
+nav{
+    position: absolute;
+    width: 400px;
+    float: right;
+    left: 400px;
+    top: 100px;
+}
+
+nav ul{
+    margin-left: 200px;
+    list-style: none;
+    width: 700px;
+    padding: 15px;
+}
+
+nav ul li{
+    border: 2px solid #11111f;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline;
+    margin: 20px;
+    
+   
+}
+
+#navegacao li a{
+    text-decoration: none;
+    color: #ebe6e6;
+}
+
+a:link , a:visited{
+    color: #ebe6e6;
+}
+
+ #navegacao :hover
+,#navegacao li:hover{
+    background: #c73a3a;
+}
+
+/*Fim da barra de menu*/
+/*Sempre atento com a pontuação e com letra MAIUSCULA e minuscula*/
+
+/*Inicio Conteudo*/
+#comprimento{
+    color: #ebe6e6;
+    width: 50%;
+    text-align: center;
+     margin-left: 30%;
+     margin-right: 30%;
+}
+#txtComprimento{
+    width: 50%;
+   margin-left: 30%;
+   margin-right: 30%;
+   border-radius: 30px;
+   margin-bottom: 10px;
+}
+#Sexo{
+    color: #ebe6e6;
+    width: 50%;
+    margin-left: 31%;
+   margin-right: 30%;
+}
+#Conteudo{
+  flex-direction: column;
+  width: 600px;
+ margin-left: 30%;
+ margin-right: 30%;
+}
+
+#btnOla{
+    width: 30%;
+    padding: 1%;
+    margin-left: 40%;
+    border-radius: 30px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#btnOla:hover{
+    background: #c73a3a;
+}
+
+
+#Conteudo #Informe h2{
+    color: #ebe6e6;
+    text-align: center;
+}
+
+#Conteudo #Informe p{
+    color: #ebe6e6;
+    text-align: center;
+}
+
+#Conteudo #Conhecimento{
+    color: #ebe6e6;
+   
+   
+}
+/*Fim Conteudo*/
+
+
+
+/*Inico rodape*/
+#Rodape{
+
+    height: 100px;
+    top: 1400px;
+    width: 100%;
+    left: 0;
+}
+#Rodape p{
+    text-align: center;
+    margin-top: 40px;
+    color: #ebe6e6;
+}
+/*Fim rodape*/
+

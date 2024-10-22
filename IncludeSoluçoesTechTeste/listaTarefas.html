@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+
+    <style>
+        body{
+            background: #2273f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #container{
+            background: white;
+            width: 50%;
+            border: solid red;
+            
+        }
+        
+        .compras{
+            margin-top: 10px;
+        }
+
+        #inputLista, #inputQtd, #btnCriar{
+            visibility: hidden;
+        }
+
+        #inputQtd{
+            width: 10%;
+        }
+
+        #inputLista{
+            width: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="lista">
+            <h1>Listas</h1>
+            <button id="reset">Reset</button>
+            <h3>Qual tipo de lista voce quer criar?</h3>
+
+            <div>
+                <button id="btnCompra">Compras</button>
+                <button id="btnTarefa">Tarefas</button>
+                <button id="btnLembrete">Lembretes</button>
+                <button id="btnOutro">Outros</button>
+            </div>
+        </div>
+        <div class="compras tarefas ">
+            <input id="inputLista">
+            <input id="inputQtd">
+            <button id="btnCriar">Criar</button>
+            
+            <ul class="tarefas"></ul>
+        </div>
+    </div>
+
+   
+
+<script>
+      const reset = document.getElementById('reset')
+
+        reset.addEventListener('click', function(){
+        location.reload();
+
+        }) // fazendo o botão de reset da pagina 
+
+
+    const botaoCompra= document.getElementById('btnCompra');
+    const input = document.getElementById('inputLista');
+    const inputQtd = document.getElementById('inputQtd');
+    const btnCriar = document.getElementById('btnCriar');
+    const tarefas =  document.querySelector('.tarefas')
+
+    function criaLi(){
+        const li = document.createElement('li');
+        return li;
+    } // criando um item de lista o "li" na pagina
+    
+
+    botaoCompra.addEventListener('click', function(){
+        console.log('botão foi clicado ')
+
+        adicionaTarefasSalvas();
+
+        const elements = [input, inputQtd, btnCriar];
+
+       elements.forEach(element => {
+         element.style.visibility = "visible";
+       });
+    })
+
+    function criaTarefa (textoInput, txtQtd){
+        const li = criaLi(); //chamando a fucção criarLi 
+        li.innerHTML = `${textoInput} - Qtd: ${txtQtd}`;
+        tarefas.appendChild(li);
+        salvarTarefas();
+    }
+
+    btnCriar.addEventListener('click', function(){
+        criaTarefa(input.value, inputQtd.value);
+    })
+    
+    function salvarTarefas(){
+        const liTarefas = tarefas.querySelectorAll('li');
+        const listaDeTarefas = [];
+
+       /* for (let tarefa of liTarefas){
+            let tarefaTexto = tarefa.innerText;
+            //tarefaTexto = tarefaTexto.replace('Apagar', '')
+            listaDeTarefas.push(tarefaTexto);
+        }*/
+
+        liTarefas.forEach(tarefa => {
+            const [texto , qtd] = tarefa.innerText.split('- Qtd: ');
+            listaDeTarefas.push({texto, qtd});
+        })
+
+        const tarefasJSON = JSON.stringify(listaDeTarefas);
+        localStorage.setItem('tarefas', tarefasJSON);
+    }
+
+    function adicionaTarefasSalvas(){
+        const tarefasSalvas = localStorage.getItem('tarefas');
+        if (tarefasSalvas) {
+            const listaDeTarefas = JSON.parse(tarefasSalvas);
+
+            listaDeTarefas.forEach(tarefa => {
+                criaTarefa(tarefa.texto, tarefa.qtd);
+            });
+    }
+}
+
+    
+  
+
+</script>
+</body>
+</html>

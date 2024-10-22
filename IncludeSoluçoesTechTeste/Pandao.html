@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandão</title>
+    <style>
+        body{
+            margin: 0;
+            background: black;
+            width: 1349px;
+            height: 100%;
+        }
+        @font-face {
+            font-family: 'Pink-Panda';
+            src: url(Fonte/Pink\ Panda.ttf);
+        }
+        #Pai{
+           width: 100%;
+           height: 100%;
+        }
+
+        #Titulo{
+            color: white;
+            font-family:'Pink-Panda';
+            margin-top: 15%;
+      
+           margin-left: 41%;
+        
+        }
+        #Pesquisa{
+           width: 23%;
+           height: 50px;
+           text-align: center;
+           margin-top: 0%;
+      
+           margin-left: 40%;
+           
+           
+        }
+        #btnPesquisa{
+            padding: 2%;
+            border-radius: 30px;
+            font-family: 'Pink-Panda';
+            margin-left: 48%;
+            margin-top: 2%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="Pai">
+    <div id="Titulo">
+        <h1>Pesquisa Panda</h1>
+    </div>
+    <div>
+        <input type="text" id="Pesquisa" placeholder="Pesquisa de imagem">
+    </div>
+    <div>
+        <button id="btnPesquisa" onclick="panda()">Pesquisar</button>
+    </div>
+</div>
+
+
+    <script>
+        
+
+        function panda(){
+            var pesquisaFofao = document.getElementById('Pesquisa').value;
+
+            if(pesquisaFofao === "Panda fofão"){
+               window.location.href = "imagemFofao.html";
+            }
+            if(pesquisaFofao === "Panda comendo"){
+                window.location.href = "PandaComendo.html";
+            }
+            if(pesquisaFofao === "Panda bebado"){
+                window.location.href = "PandaBebado.html";
+            }
+           /* else{
+                alert("O texto está incorreto!");
+            }*/
+        }
+    </script>
+</body>
+</html>

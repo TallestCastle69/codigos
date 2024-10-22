@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+          
+        }
+
+        ul{
+            margin-left: 200px;
+            list-style: none;
+            width: 700px;
+            padding: 15px;
+        }
+
+        ul li{
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            display: inline;
+            margin: 20px;
+        }
+
+        ul li a{
+            text-decoration: none;
+            color: #ebe6e6;
+        }
+
+          ul :hover
+        , li :hover{
+            background: #c73a3a;
+        }
+
+        #Botao{
+            margin-left: 500px;
+        }
+
+        #Botao1{
+            padding: 200px;
+        }
+        
+        .style-text:hover{
+            color: red;
+            /*transition: color 0.3s ease; */
+        }
+
+        #Pai{
+            font-size: 16px;
+        }
+        #Filho{
+            font-size: 3em;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="Pai">
+        div Pai
+        <div id="Filho"> div Filho</div>
+       </div>
+
+    <h2 class="style-text">Ola Mundo!!</h2>
+
+    <ul>
+        <li>
+           <a href="">HOME</a>
+        </li>
+        <li>
+            <a href="">PORTIFOLIO</a>
+        </li>
+        <li>
+            <a href="">BLOG</a>
+        </li>
+        <li>
+            <a href="">SOBRE</a>
+        </li>
+        <li>
+            <a href="">CONTATO</a>
+        </li>
+    </ul>
+
+
+    <div id="Botao">
+     <button id="Botao1" onclick="MudarCor('blue')">Olá</button>
+    </div>
+
+    <p>Neste exemplo, a variável paragraphs recebe a coleção de elementos <p>. Em seguida, usamos um loop for para iterar sobre a coleção e realizar alguma ação em cada parágrafo. </p>
+    <p>Neste exemplo, a variável paragraphs recebe a coleção de elementos <p>. Em seguida, usamos um loop for para iterar sobre a coleção e realizar alguma ação em cada parágrafo. </p>
+    <p>Neste exemplo, a variável paragraphs recebe a coleção de elementos <p>. Em seguida, usamos um loop for para iterar sobre a coleção e realizar alguma ação em cada parágrafo. </p>
+    <p>Neste exemplo, a variável paragraphs recebe a coleção de elementos <p>. Em seguida, usamos um loop for para iterar sobre a coleção e realizar alguma ação em cada parágrafo. </p>
+    <p>Neste exemplo, a variável paragraphs recebe a coleção de elementos <p>. Em seguida, usamos um loop for para iterar sobre a coleção e realizar alguma ação em cada parágrafo. </p>
+    <p>Neste exemplo, a variável paragraphs recebe a coleção de elementos <p>. Em seguida, usamos um loop for para iterar sobre a coleção e realizar alguma ação em cada parágrafo. </p>
+
+    <div>
+        <p>👨‍💻</p>
+    </div>
+
+    <button onclick="MudarCor2('#FF00FF')" style="margin-bottom: 30px;">Rosa</button><br>
+
+    <input type="text" id="myInput" style="margin-left: 200px; width: 200px;">
+    <p id="output" style="margin-left: 200px;"></p>
+    <button id="Envio"  style="margin-bottom: 500px; margin-left: 200px;">Envio</button>
+
+
+    <!-- inicio saudação -->
+    <h2 style=" margin-left: 100px;">Ola qual seu Nome?</h2>
+    <input type="text" id="pegarNome" style=" margin-left: 100px;">
+    <input type="radio" id="sexo" value="1"> masculino
+    <button id="enviarNome" >Meu nome é</button>
+    <h2 id="meuNome" style="margin-bottom: 100px; margin-left: 100px; "></h2>
+
+    
+    <!-- Fim de saudação -->
+   
+   
+
+
+    <script>
+        var texto = document.getElementById("pegarNome")
+        var envia = document.getElementById("enviarNome")
+        var saida = document.getElementById("meuNome")
+        var Sexo = document.getElementById("sexo")
+
+
+        
+        envia.addEventListener("click", function(){
+            saida.textContent = "Ola " + texto.value + " seja bem vindo";
+        });
+        
+        envia.addEventListener("mouseover", function(){
+            envia.style.color = "red"
+        })
+
+
+        var DuploClick = document.getElementById("dobleClick");
+
+        DuploClick.addEventListener("dblclick", function(event){
+            console.log("DobleClick");
+        });
+
+
+        var input = document.getElementById("myInput");
+        var enviar = document.getElementById("Envio");
+        var output = document.getElementById("output");
+
+        enviar.addEventListener("click", function () {
+        output.textContent = input.value;
+        });
+
+        enviar.addEventListener("mouseover", function(){
+            enviar.style.color = "red"
+
+        });
+
+
+
+        function MudarCor(novaCor){
+            var elemento = document.getElementById('Botao1')
+            elemento.style.background = novaCor;
+        }
+
+        
+
+        function MudarCor2(color) {
+            var paragraphs = document.getElementsByTagName("p");
+            
+            for (var i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.color = color;
+            }
+        }
+    
+        
+ 
+    </script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+@font-face {
+    font-family: Chaser;
+    src: url(Fonte/CHASER.ttf);
+    }
+
+    @font-face {
+        font-family: coolvetica;
+        src: url(Fonte/coolvetica\ condensed\ rg.otf);
+    }
+
+
+
+    body{
+        margin: 0;
+        background: #D9D9D9;
+    }
+
+    li{
+        list-style: none;
+        width: 148px;
+        height: 40px;
+
+    }
+
+    #cabecalhoPag{
+        height: 125px;
+        background: #D9D9D9;
+        position: relative;
+        top: 0;
+    }
+
+    #logo, #logo2{
+        font-family: 'Chaser';            
+    }
+
+    #logo{
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 37%;
+        margin-left: 5%;
+    }
+    #logo2{
+        margin-top: 0;
+        width: 20%;
+        /*margin-left: 25%;*/
+        margin-left: 15%;
+    }
+
+    .imgCabecalho{
+        width: 60px;
+        height: 60px;
+        
+    }
+
+    .btnCabecalho{
+        background: none;
+        border: none;
+        position: absolute;
+        top: 30px;
+    }
+    .carrinho{
+        left: 60%;
+    }
+
+    .login{
+        left: 70%;
+        margin-left: 20px;
+    }
+
+    .setaMenu{
+        left: 80%;
+        margin-left: 30px;
+    }
+
+   /* .setaMenu:hover{
+        background: #fff;
+    }*/
+
+
+    .divMenu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .menu{
+        height: 86px;
+        width: 90%;
+        display: none;
+        align-items: center;
+        justify-content: flex-start;
+        background: #D9D9D9;
+    }
+
+    .btnPs{
+        background: #006FCD;
+        top: 23%;
+        left: 10%;
+    }
+
+    .btnXbox{
+        background: #0E7A0D;
+        left: 22%;
+        top: 23%;
+    }
+
+    .btnNintendo{
+        background: #FE0016;
+        left: 34%;
+        top: 23%;
+    }
+
+    .btnPC{
+        background: #000000;
+        left: 46%;
+        top: 23%;
+    }
+
+    .btnPs, .btnXbox, .btnNintendo, .btnPC{
+        position: fixed;
+        font-size: 25px;
+        font-family: 'coolvetica';
+        border: none;
+        color: #fff;
+    }
+
+    .btnMenu{
+        margin-left: 1%;
+        width: 150px;
+        height: 40px;
+    }
+
+    .imgBtnMenu{
+        width: 30px ;
+        height: 20px;
+        margin-left: 5%;
+       
+    }
+
+    #divBusca{
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        left: 70%;
+        width: 20%;
+        
+    }
+
+    .titleBusca{
+        font-size: 25px;
+        font-family: 'coolvetica';
+    }
+
+    .inputMenu{
+        width: 100%;
+        margin-left: 1%;
+        height: 20px;
+    }
+    
+    .divPs, .divXbox, .divNintendo, .divPC{
+        display: none;
+        padding: 0;
+        margin-top: 10px;
+        background: #006FCD;
+    }
+
+    .containerBtn{
+        position: fixed;
+        padding: 0;
+        top: 28%;
+        left: 11%;
+        background: #006FCD;
+    }
+
+    .mainPage{
+        height: 100%;
+        background: #D9D9D9;
+    }
+
+/*--------------------------*/
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    margin-top: 80px;
+    /*max-width: 600px;*/
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid red;
+    height: 380px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.btnCarrosel{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.txtCarrosel{
+    position: absolute;
+    top: 50%;
+}
+
+.sobre, p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+p{
+    width: 80%;
+}
+
+
+/*---------- Card -----------------*/
+.container{
+    border: 1px solid red;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#card{
+    border: 10px double black;
+    height: 400px;
+    width: 300px;
+    margin: 5px;
+    background:  rgba(255, 255, 255, 0.38);
+   flex-direction: row;
+    
+ 
+}   
+
+.ImgCard{
+    max-width: 100%;
+    margin: 10px;
+    border: 1px solid black;
+
+}
+
+
+
+.imgCard{
+max-width: 100%;
+display: block;
+}
+
+.txtCard{
+max-width: 100%;
+margin: 10px;
+}
+
+.btnCard{
+width: 100px;
+height: 30px;
+margin-left: 10px;
+}
+

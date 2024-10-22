@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        width: 100%;
+        margin: 0;
+    }
+    /*Inicio cabeçalho*/
+
+    #container{
+        width: 100%;
+        border: 1px solid red;
+    }
+header{
+    /*&background:url(SiteMath/fundo\ Roxo.png);*/
+    /*background:#11111f;*/
+    height: 300px;
+
+}
+
+#Logo{
+    width: 20%;
+    border: 1px solid red;
+    position: absolute;
+    left: 69px;
+    top: 0px;
+}
+.imgLogo{
+   margin-left: -70px;
+    width: 360px;
+    height: 290px;
+}
+/*Fim cabeçalho*/
+
+/*Inicio da barra de menu*/
+
+
+
+
+ul{
+    border: 1px solid red;
+    margin: 0;
+    margin-left: 600px;
+    margin-top: 150px;
+	padding: 0;
+	list-style: none;
+	width: 41%;
+	background: #11111f /*url(Rectangle\ 10.png) repeat-x */;
+	float: left;
+    border-radius: 20px;
+}
+
+ul li{
+    float: left;
+}
+
+
+a:link{
+   color: white;
+}
+
+a:visited{
+    color: #68d2df ;
+}
+
+ul a{
+
+    display: block;
+    padding: 0 2em;
+    line-height: 2em;
+    text-decoration: none;
+    color: #fff;
+}
+
+ul .primeiro a{
+    background: none;
+}
+
+ul a:hover{
+    background: #C52018; /*Mudando o background ao passar o mouse*/
+    color: #fff; /*Mudando a cor da fonte*/
+    border-radius: 20px;
+}
+
+#Home #navegacao .home a,
+#Card #navegacao .cards a{
+    background-position: right bottom;
+    background: #C52018; /*Mudando o background ao passar o mouse*/
+    color: #fff; /*Mudando a cor da fonte*/
+    border-radius: 20px;
+}
+/*Fim da barra de menu*/
+</style>
+<body>
+    <div id="container">
+        <header>
+            <div id="Logo">
+                <img class="imgLogo" src="SiteMath/Logo2Trasparente.png" >
+            </div>  
+        <div id="navegacao">  
+            <ul>
+                <li class="home primeiro">
+                    <a href="PokeCard.html">HOME |</a>
+                </li>
+                <li class="cards">
+                    <a href="Cards.html">SOBRE |</a>
+                </li>
+                <li>
+                    <a href="">PORTFOLIO |</a>
+                </li>
+                <li>
+                    <a href="">CONTATO</a>
+                </li>
+            </ul>
+        </div> 
+        
+        </header>
+    </div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
+
+body{
+    margin: 0; 
+    background: url(PcNaMesa2.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
+    
+}
+
+/*Inicio header*/
+header{
+    position: relative;
+    background: white;
+}
+
+.logo{
+    font-family: "Jomhuria", sans-serif;
+    font-size: 70px;
+    width: 100px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.menu{
+    width: 40%;
+    font-family: "Jomhuria", sans-serif;
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+.menu ul li{
+    list-style: none;
+    display: inline;
+    margin: 30px;
+}
+
+/*Fim do header*/
+
+.title{
+    font-size: 200px;
+    color: white;
+    margin-left: 2rem;
+    width: 500px;
+    margin-bottom: 0;
+    text-decoration: underline;
+}
+
+.txt{
+    border: 1px solid red;
+    width: 400px;
+    margin-left: 2rem;
+    color: white;
+}
+
+/*Inicio Card-Main*/
+
+.card-main{
+    border: 1px solid red;
+    height: 500px;
+    width: 100%;
+    background: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+    
+}
+
+.card{
+    border: 1px solid red;
+    width: 200px;
+    height: 350px;
+    margin-left: 3rem;
+    overflow: hidden;
+    
+   
+}
+
+.card-img1{
+  border: 1px solid red;
+}
+
+.card-img2{
+   
+}
+
+.card-img3{
+    
+}
+
+img{
+    max-width: 100%;
+}
+
+.card-txtH1{
+    margin-left: 1rem;
+}
+
+.card-txt{
+   border: 1px solid red;
+   position: absolute;
+  width: 150px;
+   bottom: 80px;
+   color: white;
+   text-decoration: underline;
+}
+
+.card-txt:hover{
+    transform: scale(1.1);
+}
+
+/*Fim card main*/
+
+/*Inicio Main conteudo */
+
+
+.main-conteudo{
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.H1-conteudo{
+    color:white;
+}
+
+.conteudo{
+    border: 1px solid red;
+    width: 70%;
+    height: 200px;
+    background-color: transparent;
+    backdrop-filter: blur(100px);
+    margin-top: 1rem;
+    
+   
+
+}

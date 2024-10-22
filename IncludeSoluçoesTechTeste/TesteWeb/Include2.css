@@ -1,0 +1,58 @@
+div{
+    
+}
+
+
+body{
+    margin: 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: #11111f;
+}
+.container-fluid{
+
+    
+}
+
+
+/*Logo*/
+.Logo h1{
+    float: left;
+    
+}
+
+.Logo{
+    width: 300px;
+    height: 285px;
+    text-indent: -9999px; /*Escondendo o texto "caso o css nao rode o texto do lado entrara no lugar da logo"*/
+    display: block;
+    background: url(SiteMath/Logo2Trasparente.png) no-repeat;
+   
+}
+/*Fim Logo*/
+
+/*Inicio da barra de menu*/
+header{
+    width: 400px;
+    padding: 15px 0;
+    height: 300px;
+}
+a:hover{
+    color: #FF0000;
+    text-decoration: none;
+}
+
+nav ul{
+list-style: none;
+margin: 20px;
+float: right;
+}
+
+nav ul li{
+    float: left;
+    margin-left: 7px;
+}
+
+/*Fim da barra de menu*/
+
+
+/*Sempre atento com a pontuação e com letra MAIUSCULA e minuscula*/

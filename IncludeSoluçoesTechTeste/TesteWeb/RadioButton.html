@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadioButton</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    
+    <!-- inicio saudação -->
+    <h2 style=" margin-left: 100px;">Ola qual seu Nome?</h2>
+    <input type="text" id="pegarNome" style=" margin-left: 100px;">
+
+    <input type="radio" name="sexo"  value="masculino" id="sexoMasc">
+    <label for="sexoMasc">Masculino</label> 
+
+    <input type="radio" name="sexo"  value="feminino" id="sexoFem">
+    <label for="sexoMasc">Feminino</label> 
+
+    <input type="radio" name="sexo"  value="outros" id="sexoOutros">
+    <label for="sexoMasc">Outros</label> 
+
+
+    <button id="enviarNome" onclick="clic()">Meu nome é</button>
+    <h2 id="meuNome" style="margin-bottom: 100px; margin-left: 100px; "></h2>
+    <div id="conteudo"></div>
+
+    
+    <!-- Fim de saudação -->
+
+   <!-- <input type="checkbox" id="meuCheckbox">
+    <label for="meuCheckbox">Meu Checkbox</label>
+    <button onclick="clicado()">clicar</button>
+
+    <input type="radio" name="frutas" value="maca" id="radioMaca">
+    <label for="radioMaca">Maçã</label>
+
+    <input type="radio" name="frutas" value="laranja" id="radioLaranja">
+    <label for="radioLaranja">Laranja</label>
+
+    <button onclick="obterValorRadio()">Obter Valor</button> -->
+
+    <div id="container">
+        <!-- Elemento de destino onde o parágrafo será inserido -->
+      </div>
+      
+      <div id="meuElemento">
+        Conteúdo que será impresso no parágrafo.
+      </div>
+      
+      <p id="resultado"></p>
+      
+     
+      <div id="minhaTag" style="display: none;">
+        Olá Mundo!! <br>
+        Meu nome é Matheus Barbosa tenho 27 anos sou formado em analise e desenvolvimento de sistemas busco atuar na área de TI, agregando meus conhecimentos junto com os demais
+        integrantes, sempre objetivando as metas.<br>
+        Meu Linkedin é <a href="https://www.linkedin.com/in/matheus-barbosa-de-oliveira-23201337/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a> <br>
+        Tenho conhecimento nas Seguintes linguagens ao lado.
+</div>
+
+<button onclick="mostrarTag()">Mostrar Tag</button>
+<button onclick="naoMostrarTag()">Nao Mostrar Tag</button>
+      
+
+
+    <script>
+
+        function mostrarTag() {
+         var minhaTag = document.getElementById("minhaTag");
+         if( minhaTag.style.display === "none"){
+  minhaTag.style.display = "block";
+}
+}
+
+
+
+function naoMostrarTag() {
+  var minhaTag = document.getElementById("minhaTag");
+  if( minhaTag.style.display === "block"){
+  minhaTag.style.display = "none";
+}
+}
+
+
+
+        // Obtém o conteúdo do elemento com o ID desejado
+var conteudoElemento = document.getElementById("meuElemento").textContent;
+
+// Cria um novo elemento <p>
+var paragrafo = document.createElement("p");
+
+// Atribui o conteúdo ao parágrafo
+paragrafo.textContent = conteudoElemento;
+
+// Obtém o elemento de destino onde o parágrafo será inserido
+var resultado = document.getElementById("resultado");
+
+// Insere o parágrafo como filho do elemento de destino
+resultado.appendChild(paragrafo);
+
+
+/*
+
+// Cria o elemento de destino
+var container = document.getElementById("container");
+
+// Cria o elemento de parágrafo
+var paragrafo = document.createElement("p");
+
+// Cria o elemento de link
+var link = document.createElement("a");
+
+// Define o atributo href do link
+link.href = "https://www.exemplo.com";
+
+// Define o texto do link
+link.textContent = "Clique aqui";
+
+// Insere o link como filho do parágrafo
+paragrafo.appendChild(link);
+
+// Insere o parágrafo como filho do elemento de destino
+container.appendChild(paragrafo);*/
+
+      
+
+
+   /*     function clicado(){
+        var meuCheckbox = document.getElementById('meuCheckbox');
+
+        if (meuCheckbox.checked) {
+        console.log('O checkbox está marcado.');
+        } else {
+        console.log('O checkbox não está marcado.');
+        }
+    }
+
+    function obterValorRadio() {
+    var radioMaca = document.getElementById("radioMaca");
+    var radioLaranja = document.getElementById("radioLaranja");
+
+    if (radioMaca.checked) {
+        console.log("O valor selecionado é: " + radioMaca.value);
+    } else if (radioLaranja.checked) {
+        console.log("O valor selecionado é: " + radioLaranja.value);
+    } else {
+        console.log("Nenhum elemento de rádio selecionado.");
+    }
+}*/
+
+
+
+
+
+function clic(){
+
+
+
+      var texto = document.getElementById("pegarNome")
+        var envia = document.getElementById("enviarNome")
+        var saida = document.getElementById("meuNome")
+
+
+        var masc = document.getElementById("sexoMasc")
+        var fem = document.getElementById("sexoFem")
+        var out = document.getElementById("sexoOutros")
+
+
+    if(sexoMasc.checked){
+        
+            saida.textContent = "Ola " + texto.value + " seja bem vindo";
+        
+ 
+    }
+
+    if(sexoFem.checked){
+        
+            saida.textContent = "Ola " + texto.value + " seja bem vinda";
+    
+    }
+}
+
+/*function clic(){
+        var masc = document.getElementById("sexoMasc")
+        var fem = document.getElementById("sexoFem")
+        var out = document.getElementById("sexoOutros")
+
+        if(sexoMasc.checked){
+            console.log('masc está marcado.');
+        }
+        if(sexoFem.checked){
+            console.log('fem está marcado.');
+        }
+    }*/
+
+
+    </script>
+</body>
+</html>

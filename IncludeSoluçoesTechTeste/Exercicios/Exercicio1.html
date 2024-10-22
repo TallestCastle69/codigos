@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btnCor{
+            width: 50%;
+            
+        }
+
+        .container2{
+            width: 80%;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="container">
+            <button class="btnCor btnCor1">Cor 1</button>
+            <button class="btnCor btnCor2">Cor 2</button>
+            <button class="btnCor btnCor3">Cor 3</button>
+            <button class="btnCor btnCor4">Cor 4</button>
+
+            <div class="container2">
+
+
+            </div>
+        </div>
+
+        
+    </form>
+
+    <script>
+        const cont2 =  document.querySelector('.container2');
+
+        document.querySelector('.btnCor1').addEventListener("click", function(event){
+            event.preventDefault();
+            cont2.style.background = "yellow";
+        })
+
+        document.querySelector('.btnCor2').addEventListener("click", function(event){
+            event.preventDefault();
+            cont2.style.background = "black";
+        })
+        
+        
+
+    </script>
+</body>
+</html>

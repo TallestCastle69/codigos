@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: Leander;
+            src: url(Fonte/Leander.ttf);
+        }
+
+        body{
+            margin: 0;
+            background-image: url(PeakyBlinders1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }   
+
+        header{
+
+            background:  rgba(240, 248, 255, 0.28);
+            border: 1px solid red;
+        }
+
+        #menu{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 0;
+           
+        }
+
+        .logo{
+            font-family: 'Leander';
+            font-size: 40px;
+            width: 50%;
+            padding: 0;
+
+        }
+
+        .imgLogo{
+            width: 3rem;
+            display: none;
+        }
+
+        .logoLink{
+
+   
+        }
+
+        #navbar{
+           
+        }
+
+        a{
+            color: black;
+        }
+
+        .menuItem{
+            list-style: none;
+            margin: 20px ;
+        }
+
+        .nav{
+            font-size: 25px;
+            font-family: 'Leander';
+        }
+
+        .video{
+            display: flex;
+            align-items: flex-end;
+            border: 1px solid red;
+            margin-left: 600px;
+            margin-top: 10px;
+        }
+
+        @media (max-width:853px){
+            #menu{
+                flex-direction: column;
+                padding-left: 0;
+            }
+        }
+
+        @media (max-width:350px){
+            .imgLogo{
+                display: inline;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+
+
+                   
+
+                <ul id="menu" >
+                    <li class="logo menuItem "><img class="imgLogo" src="LogoPeakyBlinders.ico"><a class="Alink logoLink" href="">Peaky Blinders</a></li>
+                    <li class="menuItem nav"><a class="Alink" href="#Sobre">Sobre</a></li>
+                    <li class="menuItem nav"><a class="Alink" href="#Personagens">Personagens</a></li>
+                    <li class="menuItem nav"><a class="Alink" href="#Temporadas">Temporadas</a></li>
+                </ul>
+ 
+        
+        
+        
+    </header>
+
+    <main  style="border: 1px solid red;">
+        
+           <div class="media">
+                <h3 class="title">Peaky</h3>
+                    <h3 class="title1">Blinders</h3>
+                    <span class="txt"></span>
+            </div> 
+            
+                <video class="video" width="500px" height="300px" controls>
+                    <source src="PeakyBlindersTrailerLEGENDADO.mp4">
+                </video>
+          
+           
+    </main>
+</body>
+</html>

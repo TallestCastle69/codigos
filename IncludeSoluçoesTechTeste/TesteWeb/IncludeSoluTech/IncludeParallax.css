@@ -1,0 +1,170 @@
+/* Configuração padrão da página
+		-------------------------------*/
+		body, html {
+			margin: 0;
+			font: 16px "Lato", sans-serif;
+			color: #777;
+			height: 100%;
+		}
+
+		.conteudo {
+			color: #777;
+			background-color: white;
+			text-align: justify;
+			padding: 50px 80px;
+			height: 400px;
+			
+		}
+
+		h3 {
+			text-transform: uppercase;
+			color: #111;
+			text-align: center;
+		}
+
+		p{
+			margin-bottom: 20px;
+		}
+
+		/* Efeito Parallax
+		-------------------------------*/
+		.caixa1, .caixa2, .caixa3, .caixa4 {
+			position: relative;
+			height: 100%;
+			opacity: 0.7;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed; 
+		}
+
+		.caixa1 {
+			background-image: url(Imagens/FundoInclude.png);
+		}
+
+		.caixa2 {
+			background-image: url(Imagens/FundoInclude.png);
+		}
+
+		.caixa3 {
+			background-image: url(Imagens/FundoInclude.png);
+		}
+
+		.caixa4 {
+			background-image: url(Imagens/FundoInclude.png);
+		}
+
+		.conteudo-titulo {
+			position: absolute;
+			left: 0;
+			top: 45%;
+			width: 100%;
+			text-align: center;
+		}
+
+		.conteudo-titulo span.titulo {
+			color: #fff;
+			background-color: #111;
+			padding: 18px;
+			font-size: 25px;
+			letter-spacing: 5px;
+			text-transform: uppercase;
+		}
+
+/*----- Cabeçalho -------*/
+ul{
+    position: fixed;
+    list-style: none;
+    width: 40%;
+    left: 30%;
+    top: 0;
+    background: #11111f;
+    border-radius: 20px;
+}
+ul li{
+    float: left;
+}
+
+
+a:link{
+    color: #68d2df ;
+}
+
+a:visited{
+    color: #68d2df ;
+}
+
+ul a{
+    display: block;
+    padding: 0 2em;
+    line-height: 2em;
+    text-decoration: none;
+    color: #fff;
+}
+
+ul .primeiro a{
+    background: none;
+}
+
+ul a:hover{
+    background: #C52018; /*Mudando o background ao passar o mouse*/
+    color: #fff; /*Mudando a cor da fonte*/
+    border-radius: 20px;
+}
+
+#Home #navegacao .home a,
+#Card #navegacao .cards a{
+    background-position: right bottom;
+    background: #C52018; /*Mudando o background ao passar o mouse*/
+    color: #fff; /*Mudando a cor da fonte*/
+    border-radius: 20px;
+}
+/*----- Fim Cabeçalho ------*/
+
+
+#carouselExampleIndicators{
+	border: 1px solid red;
+	width: 30%;
+}
+
+/*.row{
+	border: 1px solid red;
+
+	margin: 10px;
+	}
+
+.col-sm-6{
+	border: 1px solid red;
+	width: 300px;
+}
+
+.card{
+  border: 1px solid red;
+  width: 300px;
+}
+
+.card-body{
+	border: 1px solid red;
+	width: 300px;
+}*/
+.card{
+	border: 1px solid red;
+}
+.card-body{
+	
+	width: 300px;	
+	margin: 50px 30px;
+}
+
+.box1, .box2, .box3{
+	position: absolute;
+	
+}
+
+.box2{
+	left: 38%;
+}
+
+.box3{
+	left: 70%;
+}

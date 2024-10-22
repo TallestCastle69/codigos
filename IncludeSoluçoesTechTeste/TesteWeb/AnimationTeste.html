@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação de Imagem</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+body{
+    margin: 0;
+    background: black;
+}
+
+    .container {
+    height: 100vh;
+    }
+.Cxtxt{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+
+}
+.txtInicial{
+ 
+    font-family: 'pink panda';
+    width: 300px; /* Tamanho inicial da imagem */
+    animation: aumentar1 2s ease-in-out forwards;
+    color: white;
+}
+
+.Cximg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.imagem {
+    width:  100px; /* Tamanho inicial da imagem */
+    animation: aumentar2 2s ease-in-out forwards 2s; /* Chama a animação "aumentar" */
+    opacity: 0;
+}
+
+@keyframes aumentar1 {
+    from {
+        transform: scale(0); /* Escala inicial da imagem (não visível) */
+    }
+    to {
+        transform: scale(2); /* Escala final da imagem (tamanho original) */
+    }
+}
+
+@keyframes aumentar2 {
+    from {
+        transform: scale(0); /* Escala inicial da imagem (não visível) */
+        opacity: 0;
+    }
+    to {
+        transform: scale(4); /* Escala final da imagem (tamanho original) */
+        opacity: 1;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container" >
+        <div class="Cxtxt">
+            <h1 class="txtInicial">Panda Fofinho</h1>
+        </div>
+        <div class="Cximg">
+            <img class="imagem" src="panda-bonito.png" alt="Imagem">
+        </div>
+        
+    </div>
+    <header class="" style="border: 1px solid red;">
+
+    </header>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #animatedElement {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <div id="animatedElement" class="hidden">Hello, World!</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    var animatedElement = document.getElementById("animatedElement");
+
+    // Adiciona uma classe para exibir o elemento
+    animatedElement.classList.remove("hidden");
+
+    // Inicia a animação após um pequeno atraso
+    setTimeout(function () {
+        animatedElement.style.opacity = 1;
+    }, 1000);
+});
+    </script>
+</body>
+</html>

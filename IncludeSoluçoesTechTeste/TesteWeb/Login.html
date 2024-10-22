@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;
+            background:url(FundoTesteLogin.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1{
+            margin-left: 2%;
+        }
+
+        #containerLogin{
+            position: relative;
+            width: 30%;
+            height: 500px;
+            left: 20%;
+            top: 50px;
+            background-color: transparent;
+            backdrop-filter: blur(100px);
+            border-radius: 50px;
+        }
+
+       #login, #senha{
+            position: absolute;
+            padding: 3%;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 3%;
+            background: transparent;
+        }
+
+        #login{
+            top: 100px;
+            left: 20%;
+        }
+
+        #senha{
+            top: 200px;
+            left: 20%;
+        }
+
+        #entra{
+            position: absolute;
+            width: 110px;
+            height: 40px;
+            top: 350px;
+            left: 50%;
+            border-radius: 20px;
+            background: transparent;
+
+        }
+
+        #entra:hover{
+            background: rgba(208, 235, 233, 0.59);
+        }
+
+        #cadUsuario{
+            position: absolute;
+            width: 110px;
+            height: 40px;
+            top: 360px;
+            left: 20%;
+        }
+    </style>
+</head>
+<body>
+<div id="containerLogin">
+    <h1>Login</h1>
+    <input type="text" id="login" placeholder="Login">
+    <input type="password" id="senha" placeholder="Senha">
+
+    <a id="cadUsuario" href="CadLogin.html">Fazer cadastro</a>
+    <button id="entra">Entra</button>
+</div>
+    
+
+<script>
+    let tamanho = document.getElementById("containerLogin")
+
+    let larguraDaDiv = containerLogin.offsetWidth;
+    let AlturaDaDiv = containerLogin.offsetHeight;
+
+    console.log("Largura da div", larguraDaDiv, "px")
+    console.log("Altura da div", AlturaDaDiv, "px")
+</script>
+</body>
+</html>

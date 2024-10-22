@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* - A transformação translate é usada para ajustar o posicionamento do botão, deslocando-o 50% para a esquerda e 50% para cima em relação ao seu próprio tamanho.*/
+      width: 100px;
+      height: 30px;
+      background-color: #ccc;
+      border: none;
+      cursor: pointer; /*- Define o cursor do mouse como um ponteiro quando ele passa sobre o botão, indicando que ele é clicável.*/
+    }
+    </style>
+</head>
+<body>
+    <button id="button">Clique Aqui</button>
+
+  <script>
+    var button = document.getElementById('button');
+
+    button.addEventListener('mouseover', function() {
+      var screenWidth = window.innerWidth;
+      var screenHeight = window.innerHeight;
+      var buttonWidth = button.offsetWidth;
+      var buttonHeight = button.offsetHeight;
+
+      var newLeft = Math.random() * (screenWidth - buttonWidth);
+      var newTop = Math.random() * (screenHeight - buttonHeight);
+
+      button.style.left = newLeft + 'px';
+      button.style.top = newTop + 'px';
+    });
+  </script>
+</body>
+</html>

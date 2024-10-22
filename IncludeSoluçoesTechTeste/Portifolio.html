@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            background: #11111f;
+            color: #ebe6e6;
+        }
+
+
+        /* Estilos para a barra de menu */
+        header {
+            border: 1px solid red;
+            width: 90%;
+            padding: 15px 0;
+            text-align: center;
+           /* position: fixed; /* Fixa a barra de menu no topo da tela */
+            top: 0;
+            left: 0;
+        }
+
+       /* .container{
+            display: flex;
+            justify-content: center;
+        }*/
+
+        img{
+            border:  1px solid red;
+            width: 30%;
+            height: 250px;  
+            margin-right: 90%;
+           
+           
+        }
+
+        nav {
+            border:  1px solid red;
+            width: 80%;
+            margin-top: 60px; /* Adiciona um espaçamento do topo para evitar que o conteúdo fique sobreposto à barra de menu */
+           
+            padding: 100px;
+            margin-left: 1%;
+        }
+
+        nav ul {
+            border:  1px solid red;
+            width: 50%;
+            margin-left: 30%;
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        #navegacao li a {
+            text-decoration: none;
+            color: #ebe6e6;
+            padding: 10px;
+        }
+
+        a:link, a:visited {
+            color: #ebe6e6;
+        }
+
+        #navegacao li:hover a {
+            color: #ebe6e6; /* Muda a cor do texto quando o item é hover */
+            background: #c73a3a; /* Adiciona um fundo quando o item é hover */
+            border-radius: 10px;
+        }
+
+        /* Ajustes para dispositivos menores usando @media */
+        @media (max-width: 768px) {
+            nav {
+                margin-top: 100px; /* Ajusta o espaçamento do topo para dispositivos menores */
+            }
+
+            nav ul {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px auto;
+            }
+        }
+
+        /*Inicio Conteudo*/
+        #Principal{
+           
+        }
+
+        #Principal #Conteudo #comprimento{
+            text-align: center;
+        }
+        #Sexo {
+            margin-left: 40%;
+            margin-top: 1%;
+            width: 30%;
+        }
+
+        #txtComprimento{
+           border-radius: 30px;
+           height: 30px; 
+           width: 20%;
+           text-align: center;
+           margin-left: 40%;
+        }
+        #btnOla{
+           margin-left: 45%;
+            margin-top: 1%;
+            padding: 10px;
+            width: 10%;
+        }
+
+        /*Fim Conteudo*/
+       /* @media(max-width: 30%){
+            #btnOla{
+                margin-left: 50px;
+            }
+        }*/
+
+
+        /*Inico rodape*/
+        #Rodape{
+            text-align: center;
+        }
+        /*Fim rodape*/
+
+        ul li{
+            list-style: none;
+
+        }
+        section{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="cabecalho">
+            <img src="SiteMath/logo3.png">  
+            <nav>
+                <ul id="navegacao">
+                    <li>
+                        <a href="IncludeTech.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="Blog.html">BLOG</a>
+                    </li>
+                    <li>
+                        <a href="Portifolio.html">PORTFOLIO</a>
+                    </li>
+                    <li>
+                        <a onclick="Travar()" href="">CONTATO</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+        <div id="Principal"> <!--Inicio Principal-->
+            <div id="Conteudo"> <!--Inicio Conteudo-->
+              <h1 id="comprimento">Olá qual seu nome?</h1>
+
+              <input type="text" id="txtComprimento">
+
+            <div id="Sexo"> <!--Inicio checkBox-->
+              <input type="radio" name="sexo"  value="masculino" id="sexoMasc">
+              <label for="sexoMasc">Masculino</label> 
+    
+              <input type="radio" name="sexo"  value="feminino" id="sexoFem">
+              <label for="sexoMasc">Feminino</label> 
+    
+              <input type="radio" name="sexo"  value="outros" id="sexoOutros">
+              <label for="sexoMasc">Outros</label> 
+            </div><!--Fim CheckBox-->
+    
+            <button id="btnOla" onclick="mostrarTag()">Olá</button>
+           
+                <section id="Informe" style="display: none;">
+                    <h2 id="txtNome"></h2>
+                    <p>
+                    Meu nome é Matheus Barbosa tenho 27 anos sou formado em analise e desenvolvimento de sistemas busco atuar na área de TI, agregando meus conhecimentos junto com os demais
+                    integrantes, sempre objetivando as metas.<br>
+                    Meu Linkedin é <a href="https://www.linkedin.com/in/matheus-barbosa-de-oliveira-23201337/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a> 
+                    </p>
+                    <section id="Conhecimento">
+                      <h3>Conhecimentos</h3>
+                         <ul>
+                          <li>Pacote Office;</li>
+                          <li>Inglês intermediário;</li>
+                          <li>Conhecimento na linguagem C, C#, HTML, CSS, JavaScript;</li>
+                          <li>Conhecimento em Banco de Dados SQL Server;</li>
+                          <li>Conhecimento de hardware e manutenção de computadores;</li>
+                          <li>GitHub:mattheeus133<a href="https://github.com/mattheeus133"><img src="	https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a></li>
+                         </ul>
+                    </section>
+    
+    <button>Linux</button>              
+    
+    
+                </section>
+    
+               
+             <!-- <button onclick="naoMostrarTag()">Nao Mostrar Tag</button> --> 
+                <button></button>
+                
+    
+            </div><!--Fim Conteudo-->
+    
+            
+            <footer id="Rodape" style="">
+              <div>
+                <p>Matheus Barbosa Tech<br>by Matheus Barbosa</p>
+    
+              </div>
+            
+            </footer>
+        </div>
+    
+
+    <script>
+
+        function mostrarTag() {
+          var minhaTag = document.getElementById("Informe");
+          minhaTag.style.display = "block";
+        
+          var text = document.getElementById("txtComprimento")
+        var Botao = document.getElementById("btnOla")
+        var saida = document.getElementById("txtNome")
+        
+        var masc = document.getElementById("sexoMasc")
+        var fem = document.getElementById("sexoFem")
+        var out = document.getElementById("sexoOutros")
+        
+        if(sexoMasc.checked){
+                    saida.textContent = "Olá " + text.value + " seja bem vindo!";
+            }
+        
+            if(sexoFem.checked){
+                    saida.textContent = "Olá " + text.value + " seja bem vinda!";
+            }
+        }
+        
+        function naoMostrarTag() {
+          var minhaTag = document.getElementById("Informe");
+          minhaTag.style.display = "none";
+        }
+        
+        function Travar(){
+          alert("Pagina em construção!!");
+        }
+        
+        
+        
+        
+        
+        </script>
+</body>
+</html>

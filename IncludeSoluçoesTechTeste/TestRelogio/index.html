@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        header{
+            position: relative;
+            width: 100%;
+            border: 1px solid red;
+        }
+
+        .title{
+            position: absolute;
+            left: 66px;
+            top: 30px;
+            width: 200px;
+            border: 1px solid red;
+        }
+
+        .relogio{
+            position: absolute;
+            left: 68%;
+            top: 0px;
+            width: 200px;
+            color: aqua;
+            font-family: sans-serif;
+            font-size: 2rem;
+            border: 1px solid red;
+        }
+
+       
+    </style>
+</head>
+<body>
+      <header>
+        <h1 class="title">TallestCastle</h1>
+
+            <p class="relogio">00:00:00</p>
+
+      </header>
+
+    <script>
+        function mostraHora() {
+            let data = new Date();
+            return data.toLocaleTimeString('pt-BR', {
+                hour12: false
+            });
+        }
+
+        function atualizarRelogio() {
+            document.querySelector('.relogio').textContent = mostraHora();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            atualizarRelogio(); // Atualiza o relógio assim que a página é carregada
+            setInterval(atualizarRelogio, 1000); // Atualiza o relógio a cada segundo
+        });
+    </script>
+</body>
+</html>

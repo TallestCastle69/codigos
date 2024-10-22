@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TallestCastle Games</title>
+    <link rel="icon" href="Icon TallestCastle.png">
+    <style>
+        @font-face{
+            font-family: 'Games';
+            src: url(Fonte/Endgame\ DEMO.otf);
+        }
+        body{
+            margin: 0;
+        }
+        .main{
+            height: 100%;
+        }
+        #imgLogo{
+            position: absolute;
+            left: 16%;
+            top: 16%;
+             opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .btnEntra{
+            position: absolute;
+            padding: 25px 50px;
+            border-radius: 20%;
+            font-family: 'Games';
+            font-size: 25px;
+            top: 75%;
+            left: 30%;
+        }
+        .btnSair{
+            position: absolute;
+            padding: 25px 70px;
+            border-radius: 20%;
+            font-family: 'Games';
+            font-size: 25px;
+            top: 75%;
+            left: 50%;
+        }
+
+        .xbox{
+            border: 1px solid red;
+            font-size: 35px;
+            background: #0E7A0D;
+            color: white;
+        }
+
+        .xboxImg{
+            width:  30px;
+            height: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <img id="imgLogo" src="LogoTallestGames.png">   
+    </main>
+    <main>
+        <a href="Index.html">
+            <button class="btnEntra">Entrar</button>
+        </a>
+        
+        <button class="btnSair">Sair</button>
+    </main>
+
+    <button class="xbox">Xbox<img class="xboxImg" src="Seta_branca-removebg-preview.png"></button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            var animatedElement = document.getElementById("imgLogo");
+
+            animatedElement.classList.remove();
+
+            setTimeout(function (){
+                animatedElement.style.opacity = 1;
+            }, 1000);
+        });
+
+    </script>
+</body>
+</html>

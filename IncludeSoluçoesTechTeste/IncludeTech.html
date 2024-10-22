@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="Normalize.css" media="screen"/>
+
+    <link rel="stylesheet" type="text/css" href="IncludeTech.css" media="screen" />
+    <title>Include SoluçõesTechTeste</title>
+</head>
+<body id="Home">
+<div class="full-height-container">
+  <div class ="container-fluid " >
+      <header class="cabecalho" >
+          <div class="Logo">
+              <h1>Include Soluções Tech</h1>
+          </div>
+
+        <nav >
+          <ul id="navegacao" class="nav nav-pills justify-content-center" >
+              <li>
+                  <a href="IncludeTech.html" class="nav-link active">HOME </a>
+              </li>
+              <li>
+                  <a href="Blog.html">BLOG </a>
+              </li>
+              <li>
+                  <a href="Portifolio.html">PORTFOLIO </a>
+              </li>
+              <li>
+                  <a onclick="Travar()" href="">CONTATO</a>
+              </li>
+          </ul>
+        </nav>
+      </header>
+
+     <div id="Principal"> <!--Inicio Principal-->
+        <div id="Conteudo"> <!--Inicio Conteudo-->
+          <h1 id="comprimento">Olá qual seu nome?</h1>
+          <input type="text" id="txtComprimento">
+        <div id="Sexo"> 
+          <input type="radio" name="sexo"  value="masculino" id="sexoMasc">
+          <label for="sexoMasc">Masculino</label> 
+
+          <input type="radio" name="sexo"  value="feminino" id="sexoFem">
+          <label for="sexoMasc">Feminino</label> 
+
+          <input type="radio" name="sexo"  value="outros" id="sexoOutros">
+          <label for="sexoMasc">Outros</label> 
+        </div>
+
+        <button id="btnOla" onclick="mostrarTag()">Olá</button>
+       
+            <section id="Informe" style="display: none;">
+                <h2 id="txtNome"></h2>
+                <p>
+                Meu nome é Matheus Barbosa tenho 27 anos sou formado em analise e desenvolvimento de sistemas busco atuar na área de TI, agregando meus conhecimentos junto com os demais
+                integrantes, sempre objetivando as metas.<br>
+                Meu Linkedin é <a href="https://www.linkedin.com/in/matheus-barbosa-de-oliveira-23201337/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a> 
+                </p>
+                <section id="Conhecimento">
+                  <h3>Conhecimentos</h3>
+                     <ul>
+                      <li>Pacote Office;</li>
+                      <li>Inglês intermediário;</li>
+                      <li>Conhecimento na linguagem C, C#, HTML, CSS, JavaScript;</li>
+                      <li>Conhecimento em Banco de Dados SQL Server;</li>
+                      <li>Conhecimento de hardware e manutenção de computadores;</li>
+                      <li>GitHub:mattheeus133<a href="https://github.com/mattheeus133"><img src="	https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a></li>
+                     </ul>
+                </section>
+
+              
+
+
+            </section>
+
+           
+         <!-- <button onclick="naoMostrarTag()">Nao Mostrar Tag</button> --> 
+
+            
+
+        </div><!--Fim Conteudo-->
+
+        
+        <footer id="Rodape" style="">
+          <div>
+            <p>Include Soluções Tech<br>by Matheus Barbosa</p>
+
+          </div>
+        </footer>
+
+
+
+
+     </div><!--Fim Principal-->
+</div><!--Fim Container-->
+</div>
+ 
+
+
+
+<script>
+
+function mostrarTag() {
+  var minhaTag = document.getElementById("Informe");
+  minhaTag.style.display = "block";
+
+  var text = document.getElementById("txtComprimento")
+var Botao = document.getElementById("btnOla")
+var saida = document.getElementById("txtNome")
+
+var masc = document.getElementById("sexoMasc")
+var fem = document.getElementById("sexoFem")
+var out = document.getElementById("sexoOutros")
+
+if(sexoMasc.checked){
+            saida.textContent = "Olá " + text.value + " seja bem vindo!";
+    }
+
+    if(sexoFem.checked){
+            saida.textContent = "Olá " + text.value + " seja bem vinda!";
+    }
+}
+
+function naoMostrarTag() {
+  var minhaTag = document.getElementById("Informe");
+  minhaTag.style.display = "none";
+}
+
+function Travar(){
+  alert("Pagina em construção!!");
+}
+
+
+
+
+
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

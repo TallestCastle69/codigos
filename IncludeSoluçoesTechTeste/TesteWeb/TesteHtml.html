@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no ">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="TesteCss.Css" media="screen" />
+
+    
+    <title>Document</title>
+</head>
+<body>
+<div class="container-fluid">
+        <main class="conteudo">
+            <article class="card">
+                <h1>HTML</h1>
+                <span>
+                .....Texto........
+                </span>
+
+            </article>
+            <article class="card">
+                <h1>CSS</h1>
+                <span>
+                .....Texto........
+                </span>
+
+            </article>
+        </main>
+        <div class="carrousel">
+            <article class="cards">
+                <h1>HTML</h1>
+            </article>
+            <article class="cards">
+                <h1>CSS</h1>
+            </article>
+            <article class="cards">
+                <h1>JavaScript</h1>
+            </article>
+            <article class="cards">
+                <h1>C#</h1>
+            </article>
+
+        </div>
+        <div class="carrosel">
+            <article class="car">
+                <h1>HTML</h1>
+            </article>
+            <article class="car">
+                <h1>CSS</h1>
+            </article>
+            <article class="car">
+                <h1>JavaScript</h1>
+            </article>
+            <article class="car">
+                <h1>C#</h1>
+            </article>
+
+        </div>
+        <h1> Bem vindo ao site HTML Progressivo</h1> 
+    <h2> Preencha o formulário abaixo para participar do curso de HTML & CSS completo, online e grátis</h2><br />
+
+    <form class="Pessoais"> <!--O atributo action define o local (uma URL) em que os dados recolhidos do formulário devem ser enviados.-->
+
+    <!-- DADOS PESSOAIS-->
+    <fieldset> <!--fieldset faz a linha ao redor do forms-->
+    <legend>Dados Pessoais</legend> <!--legend e a legenda entre as linhas no fieldset -->
+    <table cellspacing="10"> <!--O atributo cellspacing especifica o espaço entre as células e a borda da tabela (como também o espaço das células entre si).-->
+    <tr> <!--	Define uma linha de tabela -->
+    <td> <!--Define uma célula de tabela oque ta escrito dentro da celula -->
+        <label for="Dados">Nome:</label> <!--É o atributo de entrada para qual o <label> se destina. Seu valor deve ser igual ao valor do atributo id do elemento controle de entrada (<input>).-->
+    </td>
+    <td> <!--Alinhamento do texto a esquerda-->
+        <input type="text" id="Dados" name="nome"> <!--input, que possibilitam que o usuário entre com alguma informação-->
+    </td>
+    <td>
+        <label>Sobrenome: </label>
+    </td>
+    <td align ="left">
+        <input type="text" id="Dados" name="sobrenome">
+    </td>
+    </tr>
+    <tr>
+    <td>
+        <label>Nascimento: </label>
+    </td>
+    <td align="left">
+        <input type="text" name="dia" id="Dados" size="2" maxlength="2" value="dd"> <!--SIZE: é o tamanho físico, em caracteres, do campo de INPUT. O valor default é 20.-->
+    <input type="text" name="mes" id="Dados" size="2" maxlength="2" value="mm"> <!--MAXLENGTH: é o tamanho máximo de caracteres que são aceitos como entrada, O valor default é ilimitado. Quando o valor do MAXLENGTH for maior que SIZE, é criado automaticamente recurso de rolamento de tela para o campo em questão.-->
+    <input type="text" name="ano" id="Dados" size="4" maxlength="4" value="aaaa"><!--VALUE: para INPUT do tipo "text" ou "password", este atributo é opcional e deve ser usado para especificar o conteúdo default do campo-->
+    </td>
+    </tr>
+    <tr>
+    <td>
+        <label >RG: </label>
+    </td>
+    <td align="left">
+        <input type="text" name="rg" id="Dados" size="13" maxlength="13"> 
+    </td>
+    </tr>
+    <tr>
+    <td>
+        <label>CPF:</label>
+    </td>
+    <td align="left">
+        <input type="text" name="cpf" id="Dados" size="9" maxlength="9"> - <input type="text" name="cpf2" id="Dados" size="2" maxlength="2">
+    </td>
+    </tr>
+    <tr>
+        <td>
+    <input type="checkbox" name="Sexo" value="Masc"> Masculino
+    <input type="checkbox" name="Sexo" value="Fem"> Femenino
+    <input type="checkbox" name="Sexo" value="Outro"> Outros
+    </td>
+    </tr>
+    </table>
+    </fieldset>
+    </form>
+
+    <form>
+
+    <br />
+    <!-- ENDEREÇO -->
+    <fieldset>
+    <legend>Dados de Endereço</legend>
+    <table cellspacing="10">
+
+    <tr>
+    <td>
+        <label for="rua">Rua:</label>
+    </td>
+    <td align="left">
+        <input type="text" name="rua">
+    </td>
+    <td>
+        <label for="numero">Numero:</label>
+    </td>
+    <td align="left">
+        <input type="text" name="numero" size="4">
+    </td>
+    </tr>
+    <tr>
+    <td>
+        <label for="bairro">Bairro: </label>
+    </td>
+    <td align="left">
+        <input type="text" name="bairro">
+    </td>
+    </tr>
+    <tr>
+    <td>
+        <label for="estado">Estado:</label>
+    </td>
+    <td align="left">
+        <!--Select == Ao contrário do INPUT, o SELECT tem não só um identificador de abertura, mas também um identificador de encerramento. Dentro do SELECT podemos ter apenas uma sequência de identificadores OPTION.-->
+        <select name="estado" size="1" > <!--SIZE: se o tamanho é 1 ou não é informado, o SELECT será representado como um Menu de Opções. Se o tamanho for maior ou igual a 2, o SELECT será representado como uma Lista de Rolamento, e o valor de SIZE determinará quantos itens serão visíveis.-->
+        <option value="ac">Acre</option> 
+        <option value="al">Alagoas</option> 
+        <option value="am">Amazonas</option> 
+        <option value="ap">Amapá</option> 
+        <option value="ba">Bahia</option> 
+        <option value="ce">Ceará</option> 
+        <option value="df">Distrito Federal</option> 
+        <option value="es">Espírito Santo</option> 
+        <option value="go">Goiás</option> 
+        <option value="ma">Maranhão</option> 
+        <option value="mt">Mato Grosso</option> 
+        <option value="ms">Mato Grosso do Sul</option> 
+        <option value="mg">Minas Gerais</option> 
+        <option value="pa">Pará</option> 
+        <option value="pb">Paraíba</option> 
+        <option value="pr">Paraná</option> 
+        <option value="pe">Pernambuco</option> 
+        <option value="pi">Piauí</option> 
+        <option value="rj">Rio de Janeiro</option> 
+        <option value="rn">Rio Grande do Norte</option> 
+        <option value="ro">Rondônia</option> 
+        <option value="rs">Rio Grande do Sul</option> 
+        <option value="rr">Roraima</option> 
+        <option value="sc">Santa Catarina</option> 
+        <option value="se">Sergipe</option> 
+        <option value="sp" selected>São Paulo</option> <!--SELECTED: especifica que esta opção é selecionada por default essa opção ja estara amostra automaticamento ao abrir a pag--> 
+        <option value="to">Tocantins</option> 
+    </select>
+    </td>
+    </tr>
+    <tr>
+    <td>
+        <label for="cidade">Cidade: </label>
+    </td>
+    <td align="left">
+        <input type="text" name="cidade">
+    </td>
+    </tr>
+    <tr>
+    <td>
+        <label for="cep">CEP: </label>
+    </td>
+    <td align="left">
+        <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
+    </td>
+    </tr>
+    </table>
+    </fieldset>
+    <br />
+    </form>
+
+    <form>
+    <!-- DADOS DE LOGIN -->
+    <fieldset>
+    <legend>Dados de login</legend>
+    <table cellspacing="10">
+    <tr>
+    <td>
+        <label for="email">E-mail: </label>
+    </td>
+    <td align="left">
+        <input type="text" name="email">
+    </td>
+    </tr>
+    <tr>
+    <td>
+        <label for="imagem">Imagem de perfil:</label>
+    </td>
+    <td>
+        <input type="file" name="imagem" > <!--File == Define um campo para selecionar um arquivo e um botão "Procurar" (para uploads de arquivo)-->
+
+    </td>
+    </tr>
+    <tr>
+    <td>
+        <label for="login">Login de usuário: </label>
+    </td>
+    <td align="left">
+        <input type="text" name="login">
+    </td>
+    </tr>
+    <tr>
+    <td>
+        <label for="pass">Senha: </label>
+    </td>
+    <td align="left">
+        <input type="password" name="pass">
+    </td>
+    </tr>
+    <tr>
+    <td>
+        <label for="passconfirm">Confirme a senha: </label>
+    </td>
+    <td align="left">
+        <input type="password" name="passconfirm"> <!--Password == Define um campo para senha-->
+    </td>
+    </tr>
+    </table>
+    </fieldset>
+    <br />
+    <input type="submit"> <!--Submit == Define um botão para enviar os dados do formulário-->
+    <input type="reset" value="Limpar"> <!--Reset == Define um botão para reinicar o preenchimento do formulário-->
+    <!--VALUE: para os tipos "submit" e "reset", o VALUE pode ser usado para especificar o rótulo do botão-->
+    </form>
+
+    <p>
+        <h1>Html vamos la</h1>
+    </p>
+<main>
+    <ul class="list-unstyled">
+        <li class="media">
+          <img class="mr-3" src=".../64x64" alt="Imagem de exemplo genérica">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1">Objeto de mídia baseado em lista</h5>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+          </div>
+        </li>
+        <li class="media my-4">
+          <img class="mr-3" src=".../64x64" alt="Imagem de exemplo genérica">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1">Objeto de mídia baseado em lista</h5>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+          </div>
+        </li>
+        <li class="media">
+          <img class="mr-3" src=".../64x64" alt="Imagem de exemplo genérica">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1">Objeto de mídia baseado em lista</h5>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+          </div>
+        </li>
+      </ul>
+</main>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

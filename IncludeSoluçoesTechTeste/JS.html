@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .test{
+            text-decoration: none;
+        }
+
+        .test:hover{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ola Pessoa</h1>
+    <input class="inputOla" type="text">
+    <button class="btn-Ola">Click Aqui</button>
+
+
+    <h1 class="test">Teste de traço</h1>
+
+
+    <input class="inputArray" type="text">
+    <button class="btnArray">Enter</button>
+<ul>
+    <li><input type="checkbox" class="meuCb" name="tarefa"></li>
+</ul>
+    
+    <label for="tarefa" class="txtLabel">Tarefa concluida</label>
+
+    <button class="btnCor">Amarelo</button>
+    <script>
+        const cor = document.querySelector(`.btnCor`)
+
+
+        const btnOla = document.querySelector('.btn-Ola');
+        const inputola = document.querySelector('.inputOla');
+        const meucb = document.querySelector('.meuCb')
+
+        function criarP(){
+            const P = document.createElement('p');
+            return P;
+        }
+
+        function criarParagrafo(textoInput){
+            const P = criarP();
+            P.innerText = textoInput;
+
+             // Adicionando o parágrafo ao corpo do documento
+            document.body.appendChild(P)
+            
+        }
+
+        btnOla.addEventListener('click', function(){
+            criarParagrafo(inputola.value);
+        })
+
+        const textLabel = document.querySelector('.txtLabel');
+
+        function atualizarCb(){
+            if(meucb.checked) {
+                textLabel.style.textDecoration = 'line-through';
+            }
+            else{
+                textLabel.style.textDecoration = 'none';
+            }
+        }
+
+        meucb.addEventListener('change', atualizarCb);
+
+       /* function primeiroPasso() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Primeiro passo concluído");
+            resolve("Resultado do primeiro passo");
+        }, 1000);
+    });
+}
+
+function segundoPasso(resultadoAnterior) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Segundo passo concluído");
+            resolve(`${resultadoAnterior} -> Resultado do segundo passo`);
+        }, 1000);
+    });
+}
+
+function terceiroPasso(resultadoAnterior) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Terceiro passo concluído");
+            resolve(`${resultadoAnterior} -> Resultado do terceiro passo`);
+        }, 1000);
+    });
+}
+[]
+primeiroPasso()
+    .then(resultado => segundoPasso(resultado))
+    .then(resultado => terceiroPasso(resultado))
+    .then(resultadoFinal => {
+        console.log("Processo completo:", resultadoFinal);
+    });*/
+
+
+    function hello(){
+       console.log('Hello World!');
+    }
+
+  hello();
+
+  let obj = { nome: "Ana", idade: 25 };
+let jsonString = JSON.stringify(obj);
+console.log(jsonString); // {"nome":"Ana","idade":25}
+
+let jsonObject = JSON.parse(jsonString);
+console.log(jsonObject); // { nome: "Ana", idade: 25 }
+
+
+var num = [1,2,3,4,5]
+console.log(num);
+
+num.push(23);
+
+
+console.log(num);
+
+console.log(num[2])
+
+num[2] = 'Banana';
+
+console.log(num);
+
+console.log(num.length);
+
+var index = num.indexOf('Banana');
+console.log(index);
+
+var index2 = num.indexOf(33);
+console.log(index2);
+    </script>
+</body>
+</html>
